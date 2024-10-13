@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Homepage = () => {
+const Homepage = ({setFile, setAudioStream }) => {
   return (
     <main className='flex flex-1 p-4 flex-col justify-center gap-3 sm:gap-4 md:gap-5 text-center'>
         <h1 className='font-semibold text-5xl sm:text-6xl md:text-7xl'>Free<span className='text-blue-400 bold'>Scribe</span></h1>  
@@ -13,8 +13,12 @@ const Homepage = () => {
             <p className='text-blue-400'>Record</p>
             <i className="fa-solid fa-microphone-lines"></i>
         </button>
-        <p className='text-base'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-600 duration-200'>Upload <input className='hidden' type='file' accept='.mp3,.wave'></input></label>an mp3 file</p>
-        <p className='italic text-slate-500'>Free now free forever!!!</p>  
+        <p className='text-base'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-600 duration-200'>Upload
+            <input onChange={(e)=>{
+                const tempFile = e.target.files[0]
+                setFile(tempFile)
+            }} className='hidden' type='file' accept='.mp3,.wave'></input></label> an mp3 file</p>
+        <p className='italic text-slate-400'>Free now free forever!!!</p>  
     </main>
   )
 }
