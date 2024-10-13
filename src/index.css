@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  font-family: 'open-sans', sans-serif;
+}
+h1, h2, h3, .bold{
+  font-family: 'poppins';
+}
