@@ -6,7 +6,7 @@ const FileDisplay = ({resetAudio, file, audioStream}) => {
         <h1 className='font-semibold text-4xl sm:text-5xl md:text-6xl'>Your <span className='text-blue-400 bold'>File</span></h1>  
         <div className='flex items-center gap-2 mx-auto flex-row my-4'>
             <h3 className='font-semibold'>File Name:</h3>
-            <p>{file.name}</p>
+            <p>{file?file?.name:"Custom audio"}</p>
         </div> 
         <div className='flex item-center justify-between gap-4'>
             <button className='text-slate-400 font-medium hover:text-blue-600 duration-200' onClick={resetAudio }>Reset</button>
