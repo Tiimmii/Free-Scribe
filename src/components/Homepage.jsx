@@ -9,12 +9,12 @@ const Homepage = () => {
             <span className='text-blue-400'> &rarr; </span>
             Translate
         </h3>
-        <button className='flex flex-row item-center text-base justify-between gap-4 mx-auto w-72 max-w-full my-4'>
-            <p>Record</p>
+        <button className='flex flex-row item-center text-base justify-between specialBtn rounded-xl px-4 py-2 gap-4 mx-auto w-72 max-w-full my-4'>
+            <p className='text-blue-400'>Record</p>
             <i className="fa-solid fa-microphone-lines"></i>
         </button>
-        <p>Or <label className='text-blue cursor-pointer hover:text-blue-600 duration-200'>Upload 
-            <input className='hidden' type='file' accept='.mp3,.wave'></input></label></p>  
+        <p className='text-base'>Or <label className='text-blue-400 cursor-pointer hover:text-blue-600 duration-200'>Upload <input className='hidden' type='file' accept='.mp3,.wave'></input></label>an mp3 file</p>
+        <p className='italic text-slate-500'>Free now free forever!!!</p>  
     </main>
   )
 }
