@@ -41,9 +41,9 @@ const Homepage = ({setFile, setAudioStream }) => {
         mediaRecorder.current.onstop = ()=>{
             const audioblob = new Blob(audioChunks, {type: mediaType})
             setAudioStream(audioblob)
+            setAudioChunks([])
+            setDuration(0)
         }
-        setAudioChunks([])
-        setDuration(0)
     }
     useEffect(()=>{
         if(recording==='not-recording'){return}
