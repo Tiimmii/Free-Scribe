@@ -10,7 +10,7 @@ const FileDisplay = ({resetAudio, file, audioStream}) => {
         </div> 
         <div className='flex item-center justify-between gap-4'>
             <button className='text-slate-400 font-medium hover:text-blue-600 duration-200' onClick={resetAudio }>Reset</button>
-            <button className='specialBtn px-3 py-3 rounded-lg text-blue-400 flex item-center gap-2'><p>Transcribe <i className="fa-solid fa-pen-nib"></i></p></button>
+            <button className='specialBtn px-4 py-3 rounded-lg text-blue-400 flex item-center gap-2'><p>Transcribe <i className="fa-solid fa-pen-nib"></i></p></button>
         </div> 
     </main>
   )

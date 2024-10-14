@@ -19,15 +19,16 @@ const Homepage = ({setFile, setAudioStream }) => {
             tempStream = streamData
         }
         catch(err){
-            console.log(err.message )
+            console.log(err.message)
+            return
         }
         setRecording('recording')
         const media = new MediaRecorder(tempStream, {type: mediaType})
 
-        MediaRecorder.current = media
+        mediaRecorder.current = media
         mediaRecorder.current.start()
         let localAudioCHunks = []
-        MediaRecorder.current.ondatavailable= (e)=>{
+        mediaRecorder.current.ondataavailable= (e)=>{
             if(typeof e.data === 'undefined'){return}
             if(e.data.size === 0){return}
             localAudioCHunks.push(e.data)
