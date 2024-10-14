@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Transcription from './Transcription'
+import Translation from './Translation'
 
 const Info = () => {
     const [tab, setTab] = useState('transcription')
@@ -13,7 +15,8 @@ const Info = () => {
             <button 
             className={'px-5 py-1 font-medium duration-200 ' + (tab==='translation'?'bg-blue-400 text-white':'hover:text-blue-400')} 
             onClick={()=>setTab('translation')}>Translation</button>
-        </div> 
+        </div>
+        { tab === 'transcription'? (<Transcription/>):(<Translation/>)} 
     </main>
   )
 }
