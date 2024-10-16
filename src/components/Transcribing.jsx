@@ -12,7 +12,7 @@ export default function Transcribing(props) {
                 <p>{!downloading ? 'warming up cylinders' : 'core cylinders engaged'}</p>
             </div>
             <div className='flex flex-col gap-2 sm:gap-3 max-w-[400px] mx-auto w-full'>
-                {[0, 1, 2].map(val => {
+                {[0, 1, 2, 3].map(val => {
                     return (
                         <div key={val} className={'rounded-full h-2 sm:h-3 bg-slate-400 loading ' + `loading${val}`}></div>
                     )
